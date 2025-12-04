@@ -1,97 +1,124 @@
 ---
-title: "Blog | Code Stitch Web Designs"
-description: "Meta description for the page"
-permalink: "/blog/"
+title: "Blog | Tanglefoot Digital | Logan Utah"
+description: "Directly from The Latest News and Articles"
+preloadImg: "/assets/images/Mount Timpanogos background.jpg"
+permalink: "blog/"
+eleventyNavigation:
+    key: Blog
+    order: 500
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" />
-    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/blog.css" />
 {% endblock %}
 
 {% block body %}
     <!-- ============================================ -->
-    <!--                   Banner                     -->
+    <!--                    LANDING                   -->
     <!-- ============================================ -->
 
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">Blog</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/blog/" class="cs-link cs-active">Blog</a>
-            </div>
-        </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
+    <section id="int-hero">
+        <h1 id="home-h">Blog</h1>
+        <picture>
+            <source
+                media="(max-width: 600px)"
+                srcset="/assets/images/Mount Timpanogos background.jpg"
+            />
+            <source
+                media="(min-width: 601px)"
+                srcset="/assets/images/Mount Timpanogos background.jpg"
+            />
+            <img
+                aria-hidden="true"
+                decoding="async"
+                src="/assets/images/Mount Timpanogos background.jpg"
+                alt="kitchen cabinets"
+                loading="eager"
+                width="2500"
+                height="1667"
+            />
         </picture>
-    </div>
+    </section>
 
     <!-- ============================================ -->
-    <!--                 Blog Listings                -->
-    <!-- ============================================ -->
+<!--                    Blog                      -->
+<!-- ============================================ 
 
-    <div id="blog-listing">
-        <div class="cs-container">
-            {% if collections.post | length == 0 %}
-                <h1 class="cs-title">
-                    No Recent Posts
-                </h1>
-            {% else %}
-                {%- for post in collections.post | reverse -%}
-                    <article class="cs-article">
-                        <picture class="cs-article-image">
-                            <!--Mobile Image-->
-                            <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 576, height: 400 }) | avif %}" type="image/avif">
-                            <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 576, height: 400 }) | webp %}" type="image/webp">
-                            <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 576, height: 400 }) | jpeg %}" type="image/jpeg">
-                            <!--Tablet Image-->
-                            <source media="(max-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | avif %}" type="image/avif">
-                            <source media="(max-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | webp %}" type="image/webp">
-                            <source media="(max-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | jpeg %}" type="image/jpeg">
-                            <!--Desktop Image-->
-                            <source media="(min-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1648, height: 800 }) | avif %}" type="image/avif">
-                            <source media="(min-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1648, height: 800 }) | webp %}" type="image/webp">
-                            <source media="(min-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1648, height: 800 }) | jpeg %}" type="image/jpeg">
-                            <img src="{% getUrl post.data.image | resize({ width: 1648, height: 800 }) | jpeg %}" alt="{{ post.data.alt }}" width="824" height="400" decoding="async">
-                        </picture>
-                        <div class="cs-article-group">
-                            <div class="cs-author-group">
-                                <picture class="cs-author-img">
-                                    <img src="/assets/svgs/profile.svg" alt="Profile icon" width="32" height="32" decoding="async" loading="lazy" aria-hidden="true" />
-                                </picture>
-                                <span class="cs-author-name">{{ post.data.author }}</span>
-                                <span aria-hidden="true" class="cs-dot"></span>
-                                <span class="cs-date">{{ post.date | postDate }}</span>
-                            </div>
-                            <h2 class="cs-article-title">
-                                {{ post.data.title }}
-                            </h2>
-                            <p class="cs-article-desc">
-                                {{ post.data.description }}
-                            </p>
-                            <a href="{{ post.url }}" class="cs-button-solid">Continue Reading</a>
-                        </div>
-                    </article>
-                {%- endfor -%}
-            {% endif %}
+<section id="blog-1144">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-content-flex">
+                <span class="cs-topper">News And Articles</span>
+                <h2 class="cs-title">Directly from The Latest News and Articles</h2>
+            </div>
+            <a href="#featured-image" class="cs-button-solid">Discover More</a>
         </div>
-
-        {% include 'components/featured-posts.html' %}
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/event1.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/event1.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/event1.jpg" alt="people" width="305" height="180">
+                </picture>
+                <div class="cs-flex">
+                    <span class="cs-date">07 Sep, 2022</span>
+                    <h3 class="cs-h3">UNICEF Launches $10b Appeal to Help World's Children in 2023</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit distinctio quas asperiores reiciendis! Facilis quia recusandae vel facere delect corrupti!
+                    </p>
+                    <a href="/blog/sucos-creati/" class="cs-link">
+                        Read More
+                        <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/event-chevron.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/event2.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/event2.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/event2.jpg" alt="people" width="305" height="180">
+                </picture>
+                <div class="cs-flex">
+                    <span class="cs-date">07 Sep, 2022</span>
+                    <h3 class="cs-h3">Helping Children With Disabilities Improve Quality Of Life</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit distinctio quas asperiores reiciendis! Facilis quia recusandae vel facere delect corrupti!
+                    </p>
+                    <a href="{{ post.url }}" class="cs-link">
+                        Read More
+                        <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/event-chevron.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/event3.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/event3.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/event3.jpg" alt="people" width="305" height="180">
+                </picture>
+                <div class="cs-flex">
+                    <span class="cs-date">07 Sep, 2022</span>
+                    <h3 class="cs-h3">It All Starts With a UNICEF Club: Volunteer Cynthia Yue's Story</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit distinctio quas asperiores reiciendis! Facilis quia recusandae vel facere delect corrupti!
+                    </p>
+                    <a href="{{ post.url }}" class="cs-link" id ="featured-image">
+                        Read More
+                        <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/event-chevron.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                    </a>
+                </div>
+            </li>
+        </ul>
     </div>
+</section> -->
+               
+<section id="comingsoon-1100">
+    <h1 class="coming-soon-title">Coming Soon!</h1>
+</section>
+
+</div>
+
+{% include 'sections/cta.html' %}
 {% endblock %}

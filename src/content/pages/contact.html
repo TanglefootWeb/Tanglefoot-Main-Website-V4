@@ -49,7 +49,7 @@ eleventyNavigation:
 
     <section id="cs-contact">
         <div class="cs-container">
-            <form id="cs-form" name="Contact Form" method="post">
+            <form id="cs-form" name="Contact Form" method="post" netlify>
                 <div class="cs-content">
                     <span class="cs-topper">Contact</span>
                     <h2 class="cs-title">Get in Touch</h2>
@@ -106,10 +106,21 @@ eleventyNavigation:
                         placeholder="Write message..."
                     ></textarea>
                 </label>
-                <button class="cs-button-solid" type="submit">
+                <button
+                    class="g-recaptcha cs-button-solid"
+                    data-sitekey="6LcN4B0sAAAAANwbG-rUabtq5KHlUbeVGZ0ucGLN"
+                    data-callback="onSubmit"
+                    data-action="submit"
+                    type="submit">
                     Submit Message
                 </button>
             </form>
+             <script src="https://www.google.com/recaptcha/api.js"></script>
+            <script>
+                function onSubmit(token) {
+                    document.getElementById("cs-form").submit();
+                }
+            </script>
             <div class="cs-right-section">
                 <!--Email-->
                 <span class="cs-header">Email</span>

@@ -1,0 +1,207 @@
+/*-- -------------------------- -->
+<---          404 Page          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #error-1144 {
+        padding: var(--sectionPadding);
+        position: relative;
+        z-index: 1;
+        min-height: 125vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .cs-container {
+            width: 100%;
+            max-width: 49rem;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: clamp(2rem, 4vw, 3rem);
+            text-align: center;
+        }
+
+        .cs-topper {
+            font-size: clamp(0.8125rem, 1.6vw, 1rem);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+
+        .cs-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            line-height: 1.2em;
+            text-align: center;
+            max-width: 43.75rem;
+            margin: 0 0 1rem 0;
+            color: var(--bodyTextColor);
+            position: relative;
+        }
+
+        .cs-text {
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            line-height: 1.5em;
+            text-align: center;
+            width: 100%;
+            max-width: 40.625rem;
+            margin: 0 0 2rem 0;
+            color: var(--bodyTextColor);
+        }
+
+                 .cs-background {
+                         position: absolute;
+                         top: 0;
+                         left: 0;
+                         right: 0;
+                         bottom: 0;
+                         width: 100%;
+                         height: 100%;
+                         max-height: none;
+                         z-index: -1;
+                     }
+                     .cs-background:before {
+                         content: "";
+                         position: absolute;
+                         inset: 0;
+                         background-color: #f8f7f7;
+                         z-index: -1;
+                     }
+                     .cs-background img {
+                         position: absolute;
+                         inset: 0;
+                         width: 100%;
+                         height: 100%;
+                         opacity: .05;
+                         object-fit: cover;
+                    }
+
+           .cs-button-solid {
+             font-size: 1rem;
+             text-align: center;
+             /* 46px - 56px */
+             line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+             width: 11.25rem;
+             text-decoration: none;
+             font-weight: 700;
+             /* clips corners of the before element */
+             overflow: hidden;
+             margin: 0;
+             color: #ffffff;
+             border-radius: 8px;
+             padding: 0;
+             background-color: var(--primary);
+             display: inline-block;
+             position: relative;
+             z-index: 1;
+             transition: color 0.3s;
+            }
+
+         .cs-button-solid:before {
+             content: "";
+             position: absolute;
+             display: block;
+             height: 100%;
+             width: 0%;
+             background: #ffffff;
+             opacity: 1;
+             top: 0;
+             left: 0;
+             z-index: -1;
+             transition: width 0.3s;
+            }
+
+         .cs-button-solid:hover {
+             color: #fff;
+             color: var(--primary)
+         }
+
+         .cs-button-solid:hover:before {
+             width: 100%;
+         }
+
+        
+
+        .cs-redirect {
+            font-size: 0.875rem;
+            color: var(--bodyTextColor);
+            opacity: 0.7;
+            margin-top: 1rem;
+        }
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #error-1144 {
+        .cs-container {
+            max-width: 80rem;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #error-1144 {
+            
+
+            &:before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: var(--dark);
+                opacity: 0.9;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+
+            .cs-topper {
+                color: var(--primaryLight);
+            }
+
+            .cs-title,
+            .cs-text,
+            .cs-redirect {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-number {
+                background: linear-gradient(135deg, var(--primaryLight) 0%, var(--secondary) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+             .cs-background:before {
+                background-color: rgba(0, 0, 0, 0.2);
+                opacity: .02;
+            }
+             .cs-background {
+                opacity: .6;
+                filter: grayscale(1) brightness(1000%);
+            }
+            .cs-button-solid {
+                background-color: var(--secondaryLight);
+            }
+        }
+    }
+}

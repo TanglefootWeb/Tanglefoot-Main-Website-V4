@@ -1,0 +1,57 @@
+---
+title: "Page Not Found | Tanglefoot Digital"
+description: "The page you're looking for doesn't exist"
+permalink: "404/"
+eleventyExcludeFromCollections: true
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/404.css" />
+{% endblock %}
+
+{% block body %}
+    <!--  ============================================ -->
+    <!--                 404 Error                     -->
+    <!--  ============================================ -->
+    
+    <section id="error-1144">
+        <div class="cs-container">
+            <span class="cs-topper">Oops!
+                 Page Not Found</span>
+            <h2 class="cs-title">We Can't Find That Page</h2>
+            <p class="cs-text">
+                The page you're looking for doesn't exist or has been moved. Don't worry, you'll be redirected to our homepage shortly.
+            </p>
+            <a href="/" class="cs-button-solid">Go Home Now</a>
+            <p class="cs-redirect">Redirecting in <span id="countdown">10</span> seconds...</p>
+        </div>
+        <!-- Background Graphic -->
+    <picture class="cs-background">
+        <img src="/assets/svgs/topo.svg" alt="Topography Map" >
+    </picture>
+    </section>
+
+    <script>
+        // Countdown and redirect
+        let seconds = 10;
+        const countdownEl = document.getElementById('countdown');
+        
+        const countdown = setInterval(() => {
+            seconds--;
+            countdownEl.textContent = seconds;
+            
+            if (seconds <= 0) {
+                clearInterval(countdown);
+                window.location.href = '/';
+            }
+        }, 1000);
+        
+        // Optional: Check if dark mode preference exists
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+
+{% endblock %}

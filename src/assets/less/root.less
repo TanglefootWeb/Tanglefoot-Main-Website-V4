@@ -12,6 +12,9 @@
     --headerColor: #000000;
     --bodyTextColor: #000000;
     --bodyTextColorWhite: #fafbfc;
+    /* Dark-mode helper colors (used by dark-mode selectors) */
+    --dark: #2f3061;
+    --medium: #2c394b;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -256,6 +259,13 @@
     cursor: pointer;
   }
 }
+/* Dark Mode - Global page background */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode {
+    background-color: var(--dark);
+    color: var(--bodyTextColorWhite);
+  }
+}
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
@@ -288,7 +298,7 @@
     position: fixed;
     top: 2rem;
     left: 50%;
-    z-index: 10000;
+    z-index: 1000;
     transform: translateX(-50%);
     transition: top 0.3s, border-radius 0.3s, width 0.3s, max-width 0.3s;
   }
@@ -774,7 +784,7 @@
     position: fixed;
     top: 2rem;
     left: 50%;
-    z-index: 10000;
+    z-index: 1000;
     transform: translateX(-50%);
     transition: top 0.3s, border-radius 0.3s, width 0.3s, max-width 0.3s;
   }
