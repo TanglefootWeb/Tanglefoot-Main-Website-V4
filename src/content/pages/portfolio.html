@@ -1,0 +1,282 @@
+---
+title: "Portfolio | Tanglefoot Digital | Logan Utah"
+description: "Stop posting into the void hoping someone will notice. We create targeted social media ads that put your business in front of people who actually want to buy from you."
+preloadImg: "/assets/images/Mount Timpanogos background.jpg"
+permalink: "portfolio/"
+eleventyNavigation:
+    key: Portolio
+    order: 3100
+    parent: web-design
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/portfolio.css" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+        <h1 id="home-h">Portfolio</h1>
+        <picture>
+            <source
+                media="(max-width: 600px)"
+                srcset="/assets/images/Mount Timpanogos background.jpg"
+            />
+            <source
+                media="(min-width: 601px)"
+                srcset="/assets/images/Mount Timpanogos background.jpg"
+            />
+            <img
+                aria-hidden="true"
+                decoding="async"
+                src="/assets/images/Mount Timpanogos background.jpg"
+                alt="mountains"
+                loading="eager"
+                width="2500"
+                height="1667"
+            />
+        </picture>
+    </section>
+
+   <!-- ============================================ -->
+<!--                  Portolio                -->
+<!-- ============================================ -->
+
+<section id="portfolio-1528">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Work</span>
+            <h2 class="cs-title">Websites That Work As Hard As You Do</h2>
+            <p class="cs-text">
+                Browse our web design work and see how we create sites that convert visitors into customers. From sleek landing pages to full e-commerce builds, we've helped businesses establish their online presence with websites that actually deliver results.	 
+            </p>
+            <a href="#portfolio-1628" class="cs-button-solid">View Work</a>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/assets/images/design.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/design.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/design.jpg" alt="fast turnaround" width="305" height="240">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Strategic Design</h3>
+                        <p class="cs-item-text">
+                            We design with your ideal customer in mind, creating user experiences that guide visitors toward taking action.
+                        </p>
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="/assets/images/strategic design.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/strategic design.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/strategic design.jpg" alt="design optimization" width="305" height="240">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Design & Optimization</h3>
+                        <p class="cs-item-text">
+                            We craft beautiful, high-performing websites and continuously refine them to maximize conversions and engagement.	
+                        </p>
+                        <div class="cs-progress-flex">
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--Stats Group-->
+    <div class="cs-stats-container">
+        <ul class="cs-stats-group">
+            <li class="cs-stat">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/checkmark.webp" alt="icon" width="48" height="48">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-stat-number">Custom</span>
+                    <span class="cs-desc">Website Design</span>
+                </div>
+            </li>
+            <li class="cs-stat">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/gear.webp" alt="icon" width="48" height="48">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-stat-number">Included</span>
+                    <span class="cs-desc">Ongoing Support</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- Background Graphic -->
+    <picture class="cs-background">
+        <img src="/assets/svgs/topo.svg" alt="Topography Map" >
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                   Logos                      -->
+<!-- ============================================ 
+
+<section id="logos-572">
+    <div class="cs-container">
+        Ideally you want to use svg's for the file path image, which is why these aren't wrapped in picture elements for different screen sizes
+        <img class="cs-logo" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Logos/logo1.png" alt="logo" width="287" height="65" loading="lazy" decoding="async">
+        <img class="cs-logo" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Logos/logo2.png" alt="logo" width="229" height="55" loading="lazy" decoding="async">
+        <img class="cs-logo" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Logos/logo3.png" alt="logo" width="235" height="53" loading="lazy" decoding="async">
+        <img class="cs-logo" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Logos/logo4.png" alt="logo" width="228" height="61" loading="lazy" decoding="async">
+    </div>
+</section>
+-->
+<!-- ============================================ -->
+<!--                  Portfolio                    -->
+<!-- ============================================ -->
+
+<section id="portfolio-1628">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Our Portfolio</span>
+                <h2 class="cs-title">See What We’ve Built for Our Clients</h2>
+            </div>
+            <p class="cs-text">
+                Explore a selection of our recent projects. Each website is hand-crafted to reflect our clients’ unique brands and business goals. From local businesses to growing startups, we help organizations stand out online and connect with their customers.
+            </p>
+        </div>                  
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/Portfolio Images.jpeg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/Portfolio Images.jpeg">
+                        <img loading="lazy" decoding="async" src="/assets/images/Portfolio Images.jpeg" alt="website portfolio" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">This could be you!</h3>
+                    <p class="cs-item-text">
+                        <strong>Your brand deserves to be here.</strong><br> Contact us today to get a custom website designed that showcases your brand and gets you featured in our portfolio.
+                    </p>
+                    <span class="cs-fake-link">
+                        View Project
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/Portfolio Images 1.jpeg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/Portfolio Images 1.jpeg">
+                        <img loading="lazy" decoding="async" src="/assets/images/Portfolio Images 1.jpeg" alt="website portfolio" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">This could be you!</h3>
+                    <p class="cs-item-text">
+                        <strong>Your brand deserves to be here.</strong><br> Contact us today to get a custom website designed that showcases your brand and gets you featured in our portfolio.
+                    </p>
+                    <span class="cs-fake-link">
+                        View Project
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/Portfolio Images 2.jpeg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/Portfolio Images 2.jpeg">
+                        <img loading="lazy" decoding="async" src="/assets/images/Portfolio Images 2.jpeg" alt="website portfolio" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">This could be you!</h3>
+                    <p class="cs-item-text">
+                        <strong>Your brand deserves to be here.</strong><br> Contact us today to get a custom website designed that showcases your brand and gets you featured in our portfolio.
+                    </p>
+                    <span class="cs-fake-link">
+                        View Project
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/Portfolio Images 3.jpeg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/Portfolio Images 3.jpeg">
+                        <img loading="lazy" decoding="async" src="/assets/images/Portfolio Images 3.jpeg" alt="website portfolio" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">This could be you!</h3>
+                    <p class="cs-item-text">
+                        <strong>Your brand deserves to be here.</strong><br> Contact us today to get a custom website designed that showcases your brand and gets you featured in our portfolio.
+                    </p>
+                    <span class="cs-fake-link">
+                        View Project
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>  
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ 
+
+<section id="reviews-566">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Reviews</span>
+            <h2 class="cs-title">What Our Clients Say</h2>
+            <p class="cs-text">
+                Vitae ultricies leo integer malesuada nunc vel. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Viverra aliquet eget sit amet tellus cras adipiscing. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                Blue Quote
+                <img class="cs-stars" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Reviews/stars3.svg" decoding="async" alt="quote icon" width="189" height="24">
+                <p class="cs-item-text">
+                    Curabitur vitae nunc sed velit dignissim sodales ut. Maecenas ultricies mi eget mauris pharetra et. Et ligula ullamcorper malesuada proin pellentesque diam volutpat commodo.
+                </p>
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile2.jpg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true">
+                    </picture>
+                    <span class="cs-name">
+                        Vera Robinson
+                        <span class="cs-job">Psychologist</span>
+                    </span>
+                </div>
+            </li>
+            <li class="cs-item">
+                Blue Quote
+                <img class="cs-stars" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Reviews/stars3.svg" decoding="async" alt="quote icon" width="189" height="24">
+                <p class="cs-item-text">
+                    Curabitur vitae nunc sed velit dignissim sodales ut. Maecenas ultricies mi eget mauris pharetra et. Et ligula ullamcorper malesuada proin pellentesque diam volutpat commodo
+                </p>
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile2.jpg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true">
+                    </picture>
+                    <span class="cs-name">
+                        Benjamin Norris
+                        <span class="cs-job">Business analyst</span>
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section> --> 
+                                
+                                
+                                
+    {% include 'sections/cta.html' %}
+{% endblock %}

@@ -726,6 +726,12 @@
       align-items: stretch;
       position: relative;
       border-radius: 8px;
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease;
+  }
+  #pricing-1087 .cs-item:hover {
+      border-color: var(--primary);
+      border-width: 2px;
   }
   #pricing-1087 .cs-coming-soon {
     font-size: 18px;
@@ -939,6 +945,10 @@
   body.dark-mode #pricing-1087 .cs-item.cs-popular:before {
     background: #fff;
     color: var(--primary);
+  }
+  body.dark-mode #pricing-1087 .cs-item:hover {
+      border-color: #fff;
+      border-width: 2px;
   }
   body.dark-mode #pricing-1087 .cs-item {
       background-color: rgba(0, 0, 0, 0.4);
